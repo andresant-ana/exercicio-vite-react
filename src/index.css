@@ -1,12 +1,10 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: rgba(0, 255, 0, 0.87);
+  background-color: #000000;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,26 +12,33 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
+  transition: color 0.2s;
 }
+
 a:hover {
   color: #535bf2;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background-color: #000000;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.5em;
   line-height: 1.1;
+  margin-top: 0;
 }
 
 button {
@@ -45,14 +50,125 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
+  background-color: #111;
 }
-button:focus,
-button:focus-visible {
+
+button:focus, button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.cabecalho {
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start
+  padding: 1rem 2rem;
+}
+
+.cabecalho h1 {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu-item-principal {
+  background-color: #141414;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s;
+}
+
+.menu-item-principal:hover {
+  background-color: #535bf2;
+}
+
+.menu-item-secundario {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.2s;
+}
+
+.menu-item-secundario:hover {
+  background-color: #111;
+}
+
+/* Rodapé */
+
+.rodape {
+  background-color: #141414;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Conteúdo */
+
+.conteudo {
+  background-color: #141414;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 80%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Tabela de aparelhos */
+
+.tabela-de-aparelhos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-de-aparelhos tr, .tabela-de-aparelhos td {
+  border: none;
+  padding: 8px;
+}
+
+.tabela-de-aparelhos a {
+  color: #646cff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.tabela-de-aparelhos a:hover {
+  color: #535bf2;
+}
+
+/* Cores */
+
+:root {
+  color-scheme: light dark;
+  color: rgba(0, 255, 0, 0.87);
+  background-color: #000000;
 }
 
 @media (prefers-color-scheme: light) {
@@ -60,9 +176,11 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
