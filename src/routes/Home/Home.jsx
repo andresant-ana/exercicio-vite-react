@@ -1,7 +1,6 @@
 export default function Home() {
     return (
         <main className="conteudo">
-            <h1>Home</h1>
             <div className="propagandas">
                 <div className="propaganda">
                     <h3>Produto em Promoção!</h3>

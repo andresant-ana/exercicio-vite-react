@@ -13,10 +13,11 @@ export default function VisualizarAparelho() {
   return (
     <div className="conteudo">
       <h1>{aparelho.nome}</h1>
-      <img src={`../imagens/${aparelho.id}.jpg`} alt={aparelho.nome} />
+      <img src='../img/${aparelho.id}.jpg' alt={aparelho.nome} />
       <p>Preço: R$ {aparelho.preco}</p>
       <p>Ano de Lançamento: {aparelho.anoLancamento}</p>
       <p>Capacidade: {aparelho.capacidade} GB</p>
+      <p>{aparelho.resumo}</p>
     </div>
   );
 }

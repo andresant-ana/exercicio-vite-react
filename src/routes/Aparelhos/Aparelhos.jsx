@@ -22,7 +22,7 @@ export default function Aparelhos() {
                   {aparelho.nome}
                 </Link>
               </td>
-              <td>R$ {aparelho.preco}</td>
+              <td>R$ {aparelho.preco},00</td>
             </tr>
           ))}
         </tbody>

@@ -5,13 +5,13 @@ export default function Cabecalho() {
 
     return(
         <>
-            <header className="cabecalho">
-                <h1>e-FIAP</h1>
-                <ul>
-                    <li><Link to="/">HOME</Link></li>
-                    <li><Link to="/aparelhos">APARELHOS</Link></li>
-                </ul>
-            </header>
+            <div class="cabecalho">
+                <h1>FIAP SHOP</h1>
+                <div class="menu-container">
+                    <a href="/" class="menu-item-principal">Home</a>
+                    <a href="/aparelhos" class="menu-item-principal">Aparelhos</a>
+                </div>
+            </div>
         </>
     )
 
